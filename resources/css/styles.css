@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+i {
+    color: white;
+}
+
+.white-icon {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+#navbarNav .navbar-nav .nav-item {
+    padding: 10px; 
+}
+
+.black-icon {
+    color: black;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.btn-contacto {
+        background: none;
+        color: blue;
+        border: 1px solid blue;
+        border-radius: 20px;
+        padding: 5px 10px; 
+        text-decoration: none;
+    
+}
+.btn-contacto:hover {
+    background-color: #0a58ca;
+    color: #fff;
+}
+
+.navbar .nav-link {
+    padding: 0;
+}
+
+.carousel-item img {
+    max-height: 300px; 
+}
+
+.descripcion {
+    padding: 15px 150px;
+    color: rgb(57, 57, 137);
+}
+
+.new-products {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.new-products h4{
+    text-align: start;
+    font-weight: bold;
+}
+
+.new-products-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.new-products article {
+    width: 15%;
+    transition: 1s;
+}
+
+.new-products article:hover{
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.new-products article a {
+    color: black;
+    text-decoration: none;
+}
+
+.new-products figure {
+    margin: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    display: flex;
+    flex-direction: column;
+}
+
+.price {
+    font-size: 0.8rem;
+    text-decoration: line-through;
+    color: grey;
+}
+
+.new-products img {
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    align-self: center;
+}
+
+.new-products span {
+    font-size: 0.85rem;
+    padding-top: 7px;
+    display: flex;
+}
+
+.box-card{
+    display: block;
+    padding: 5px;
+    border-top: 1px solid #ebebeb;
+}
+
+
+
+figcaption {
+    font-weight: bold;
+}
+
+
+
+.first-flyer figure img {
+    margin-bottom: 0px;
+    height: 370px;
+    position: relative;
+}
+
+.flyer-text {
+    position: absolute;
+    color: white; 
+    padding: 10px;
+    transform: translate(10%, 220%);
+    text-align: center;
+}
+
+.second-descripcion{
+    padding: 40px 340px;
+    color: black;
+    font-size: 1.10rem;
+}
+
+.home-middle i {
+    color: black;
+
+}
+
+.subtitle-container{
+    display: inline-block;
+}
+
+.subtitle-container h4{
+    margin-right: 30px;
+    float: left;
+    font-size: 1.2rem;
+    color: grey;
+}
+
+.subtitle-container h4:first-child {
+    color: black; 
+    text-decoration: underline; 
+    text-decoration-color: blue;
+    text-decoration-thickness: 2px;
+}
+
+.flyer-text-second {
+    
+        position: absolute;
+        color: white;
+        padding: 10px;
+        transform: translate(0%, 200%);
+        text-align: center;
+ 
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.messages-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 90px;
+}
+.footer {
+    text-align: center;
+    margin: 0 auto;
+    width: 30%;
+    padding: 10px;
+}
+
+.footer i {
+    font-size: 2.3rem;
+    margin: 10px 10px;
+    color: blue;
+}
+
+.footer h4 {
+    font-weight: bold;
+}
+
+.footer p {
+    color: #666;
+    padding: 10px 25px;
+    margin-top: 0;
+}
+
+.container-footer {
+    background-color: black;
+
+    
+}
+
+.data {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+
+.foot {
+    border-top: 1px solid white;
+    padding: 1em;
+    color: #fff;
+    text-align: center;
+    background-color: black;
+}
+
+.p-2{
+
+    padding: .5rem !important;
+}
+
+
+.footer-text {
+    color: #fff;
+}
+
+.form-control {
+    margin-right: 20px;
+    background-color: black;
+}
+
+.btn-footer {
+    border-radius: 30px;
+    background-color: blue;
+    color: #fff;
+}
+
+.log-in{
+    padding-top: 20px;
+}
+
+.container-log  {
+    padding-top: 40px;
+}
+
+.container-cliente {
+    padding-top: 40px;
+}
+
+.container-log h4 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.container-log h6 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.form-log {
+    padding-top: 10px;
+}
+.form-log .form-control {
+    background-color: #fff;
+    width: 60%;
+}
+
+.fp-cliente {
+    padding-top: 50px;
+}
+
+.buton input {
+    background-color: blue;
+    color: white;
+    border-radius: 12px;
+    width: 170px;
+    margin-top: 23px;
+}
+
+.buton input:hover {
+    background-color: lightblue; 
+    color: black;
+}
+
+.container-admin {
+    padding-top: 40px;
+}
+
+.fp-admin {
+    padding-top: 50px;
+}
+
+.container-cuenta {
+    padding-top: 40px;
+}
+
+.form-cuenta .form-control {
+    background-color: #fff;
+}
+
+.container-registro {
+    padding-top: 40px;
+}
+
+.container-cuenta h4 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.crear-cuenta {
+    padding-top: 20px;
+}
+
+.form-contacto .form-control {
+    background-color: #fff;
+}
+
+.container-form {
+    padding-top: 40px;
+}
+
+.container-form h4 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.container-contacto {
+    padding-top: 40px;
+}
+
+.container-contacto i {
+    color: black;
+}
