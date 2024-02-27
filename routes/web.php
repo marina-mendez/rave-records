@@ -1,39 +1,32 @@
 <?php
 
+use App\Http\Controllers\AboutUsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\UsersController;
 
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
+//Home
 Route::get('/', HomeController::class);
 
-Route::get('productos', function () {
-    return view('productos');
+//Productos
+Route::controller(ProductosController::class)->group(function(){
+    Route::get('productos', 'index');
+    Route::get('productos/{categoria}','categoria');
+    Route::get('productos/{categoria}/{producto}', 'producto');
 });
 
-//si pusiéramos esta ruta luego de la que sigue, nunca se llegaría a leer.
-Route::get('productos/otraurl', function () {
-    return view('unapagina');
+//Records
+
+//Login
+Route::controller(UsersController::class)->group(function(){
+    Route::get('login/cliente', 'cliente');
+    Route::get('login/admin', 'admin');
 });
 
-Route::get('productos/{variable}', function ($variable) {
-    return view('otrapagina');
-});
+//Contacto
+Route::get('contacto', [AboutUsController::class, 'index']);
 
-Route::get('productos/{variable}/{categoria}', function ($variable, $categoria) {
-    return view('otrapagina');
-});
 
 //el signo de pregunta nos dice que la variable es opcional:
 //si no le pasamos un valor, automáticamente toma el valor de null

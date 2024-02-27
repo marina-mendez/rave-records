@@ -10,13 +10,17 @@ class ProductosController extends Controller
         return "Pagina principal de productos.";
     }
 
-    public function create(){
-        //formulario para crear algo: en este caso no sirve
+    public function categoria($categoria){
+        return "Pagina que muestra la categoría $categoria de producto.";
+
     }
 
-    public function show($prod){
-        //mostrar productos en particular
-        return "Pagina que muestra el producto $prod con todas sus características.";
+    public function producto($prod){
+        return view('productos.producto');
 
     }
 }
+    /*public function create(){
+        //formulario para crear algo: en este caso no sirve
+    }*/
+
