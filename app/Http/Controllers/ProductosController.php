@@ -7,16 +7,18 @@ use Illuminate\Http\Request;
 class ProductosController extends Controller
 {
     public function index(){
-        return "Pagina principal de productos.";
+        return view('tienda.producto');
+        //return "Pagina principal de productos.";
     }
 
     public function categoria($categoria){
-        return "Pagina que muestra la categoría $categoria de producto.";
+        return view('tienda.categoria');
+        //return "Pagina que muestra la categoría $categoria de producto.";
 
     }
 
     public function producto($prod){
-        return view('productos.producto');
+        return view('tienda.producto');
 
     }
 }

@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class RecordsController extends Controller
+class ShopController extends Controller
 {
     public function index(){
-        return view('records.index');
+        return view('shop.carrito');
     }
 
     public function record($record){
-        return view('records.record');
+        return view('shop.checkout');
     }
 }
