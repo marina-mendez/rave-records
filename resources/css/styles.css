@@ -207,7 +207,7 @@ footer {
 .footer i {
     font-size: 2.3rem;
     margin: 10px 10px;
-    color: blue;
+    color: white;
 }
 
 .footer h4 {
@@ -296,7 +296,7 @@ footer {
 }
 
 .buton input {
-    background-color: blue;
+    background-color: yellow;
     color: white;
     border-radius: 12px;
     width: 170px;
