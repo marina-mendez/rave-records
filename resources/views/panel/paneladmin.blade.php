@@ -1,3 +1,9 @@
+@extends('layouts.header')
+
+@section('title', 'Panel del Administrador')
+
+@section('content')
+
 <div id="content">
     <section>
         <div class="container mt-5">
@@ -68,3 +74,5 @@
         </div>
     </section>
 </div>
+
+@endsection

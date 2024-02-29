@@ -1,3 +1,9 @@
+@extends('layouts.header')
+
+@section('title', 'Inicio')
+
+@section('content')
+
 <div class="container">
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
@@ -292,3 +298,4 @@
         </section>
     </section>
 </div>
+@endsection

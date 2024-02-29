@@ -1,3 +1,9 @@
+@extends('layouts.header')
+
+@section('title', 'Contacto')
+
+@section('content')
+
 <section class="container container-contacto">
     <p>Contacto <i class="bi bi-arrow-down"></i></p>
     <section class="container-form">
@@ -53,3 +59,5 @@
             </section>
     </section>
 </section>
+
+@endsection
