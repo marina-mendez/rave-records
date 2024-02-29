@@ -42,15 +42,3 @@ Route::controller(ShopController::class)->group(function(){
     Route::get('checkout', 'checkout');
 });
 
-//el signo de pregunta nos dice que la variable es opcional:
-//si no le pasamos un valor, automáticamente toma el valor de null
-/*Route::get('productos/{variable}/{categoria?}', function ($variable, $categoria = null) {
-
-    if($categoria){
-        return view('estapagina');
-    }else{
-        return view('otrapagina');
-    }
-
-});
-
