@@ -13,4 +13,8 @@ class UsersController extends Controller
     public function cliente(){
         return view('login.cliente');
     }
+
+    public function create(){
+        return view('login.create');
+    }
 }
