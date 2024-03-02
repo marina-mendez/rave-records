@@ -8,7 +8,7 @@ use App\Http\Controllers\RecordsController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\AboutUsController;
-
+use App\Http\Controllers\ClasesController;
 
 //Home
 Route::get('/', HomeController::class);
@@ -40,6 +40,9 @@ Route::get('contacto', ContactController::class);
 
 //AboutUs
 Route::get('nosotros', AboutUsController::class);
+
+//Clases
+Route::get('clases', ClasesController::class);
 
 //Carrito
 Route::controller(ShopController::class)->group(function(){
