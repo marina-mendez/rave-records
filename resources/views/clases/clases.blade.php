@@ -1,9 +1,8 @@
 @extends('layouts.header')
 
-@section('title', 'Sobre Nosotros')
+@section('title', 'Clases de DJ')
 
 @section('content')
-
 <section>
     <section>
         <article>
@@ -15,7 +14,7 @@
             <a href="" class="">Reservar ahora</a>
         </article>
     </section>
-    <section>
+    <section class="container-registro">
         <section>
             <h3>Iniciate como DJ Profesional</h3>
             <span>Comenzamos el 13 de Noviembre</span>
