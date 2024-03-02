@@ -1,6 +1,6 @@
 @extends('layouts.header')
 
-@section('title', 'Crear cuenta')
+@section('title', 'Cliente')
 
 @section('content')
 <section class="container container-cuenta"> 
