@@ -41,7 +41,7 @@
             <div class="" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.php?section=home">Home</a>
+                        <a class="nav-link" aria-current="page" href="{{ asset('/') }}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.php?section=records">Records</a>
@@ -80,9 +80,9 @@
                     <ul class="dropdown-menu">
                         <li class="dropdown-item">Mi cuenta:</li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="index.php?section=cliente">Cliente</a></li>
-                        <li><a class="dropdown-item" href="index.php?section=administrador">Administrador</a></li>
-                        <li><a class="dropdown-item" href="index.php?section=crear-cuenta">Crear una cuenta</a></li>
+                        <li><a class="dropdown-item" href="{{ asset('login/cliente') }}">Cliente</a></li>
+                        <li><a class="dropdown-item" href="{{ asset('login/admin') }}">Administrador</a></li>
+                        <li><a class="dropdown-item" href="{{ asset('crear') }}">Crear una cuenta</a></li>
                     </ul>
              </li>
              </form>

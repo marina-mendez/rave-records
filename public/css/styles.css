@@ -7,6 +7,11 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+
+.bold {
+    font-weight: bold;
+}
+
 i {
     color: white;
 }
@@ -207,7 +212,7 @@ footer {
 .footer i {
     font-size: 2.3rem;
     margin: 10px 10px;
-    color: white;
+    color: blue;
 }
 
 .footer h4 {
@@ -296,7 +301,7 @@ footer {
 }
 
 .buton input {
-    background-color: yellow;
+    background-color: blue;
     color: white;
     border-radius: 12px;
     width: 170px;
@@ -355,5 +360,57 @@ footer {
 }
 
 .container-contacto i {
+    color: black;
+}
+
+
+
+.login {
+    display: flex;
+    flex-direction: row;
+    padding-top: 40px;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.login-step p{
+    font-size: 0.8rem;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-login {
+    width: 25vw;
+}
+
+.login-create {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.login-create p {
+    padding-top:  15px;
+}
+
+.buton-crearlog {
+    padding-top: 20px;
+}
+
+.btn-crear {
+    background: blue;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px; 
+    text-decoration: none;
+
+}
+
+.btn-crear:hover {
+    background-color: lightblue;
     color: black;
 }
