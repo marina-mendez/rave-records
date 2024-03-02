@@ -59,7 +59,7 @@
             </div>
            
             <div>
-                <a href="index.php?section=contacto" class="btn-contacto">Contacto</a>
+                <a href="{{ asset('contacto') }}" class="btn-contacto">Contacto</a>
             </div>
            
             <form class="d-flex" style="margin-right:100px">
