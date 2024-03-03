@@ -48,7 +48,6 @@
                                         echo '<a>|</a>';
                                         echo '<a href="index.php?section=eliminar-admin&idusuario=' . $id . '">Eliminar</a>';
                                         echo '</td>';
-                                
                                         echo '</tr>';
                                         
                                     }
