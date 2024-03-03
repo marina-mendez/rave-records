@@ -24,4 +24,13 @@ class UsersController extends Controller
     public function create(){
         return view('login.create');
     }
+
+    public function usercreate(){
+        return view('users.usercreate');
+    }
+
+    
+    public function userscrud(){
+        return view('users.userscrud');
+    }
 }

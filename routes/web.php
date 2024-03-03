@@ -16,14 +16,16 @@ Route::get('/', HomeController::class);
 //Tienda
 Route::controller(ProductosController::class)->group(function(){
     Route::get('tienda', 'index');
-    Route::get('tienda/{categoria}','categoria');
-    Route::get('tienda/{categoria}/{producto}', 'producto');
+    //Route::get('tienda/{categoria}','categoria');
+    Route::get('tienda/{id}', 'producto')->name("producto.show");
+
+    Route::get('productoscreate', 'create')->name('productoscreate');
+    Route::get('productoscrud', 'create')->name('productoscrud');
 });
 
 //Records
 Route::controller(RecordsController::class)->group(function(){
     Route::get('records', 'index');
-    Route::get('records/{record}','record');
 });
 
 //Login y panel de control
@@ -35,6 +37,10 @@ Route::controller(UsersController::class)->group(function(){
 
 //Crear usuario
 Route::get('crear', [UsersController::class, 'create']);
+
+//Crear administrador y mostrar usuarios
+Route::get('userscreate', [UsersController::class, 'userscreate'])->name('userscreate');
+Route::get('userscrud', [UsersController::class, 'userscrud'])->name('userscrud');
 
 //Contacto
 Route::get('contacto', ContactController::class);

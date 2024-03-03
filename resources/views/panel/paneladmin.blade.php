@@ -13,8 +13,6 @@
     @endforeach
 <ul>
 
-{{$users->links()}}
-
 <div id="content">
     <section>
         <div class="container mt-5">
@@ -22,13 +20,16 @@
                 <div class="col-sm-12 mb-3">
                     <h1>Hola!</h1>
                     <h6>Usted se encuentra en el panel de administrador 😉</h6>
-                    <a href="#"><input class="btn btn-primary" type="button" value="Administrar productos"></a>
-                    <!-- Al hacer click en administrar productos, debe dirigirse al ABM de productos -->
-                    <a href="#"><input class="btn btn-success" type="button" value="Agregar administrador"></a>
-                    <!-- Al hacer click en iniciar sesión, debe dirigirse a agregar-admin.php -->
-                    <a href="#"><input class="btn btn-warning" type="button" value="Registro clientes"></a>
-                    <!-- Al hacer click en iniciar sesión, debe dirigirse a panel-cliente.php -->
+                    
+                    {{$users->links()}}
+
+                    <!-- CAMBIOS DE MARU!!!!!!:-->
+                    <a href="{{route("productoscreate")}}"><input class="btn btn-primary" type="button" value="Agregar productos"></a>
+                    <a href="{{route("productoscrud")}}"><input class="btn btn-primary" type="button" value="Registro de productos"></a>
+                    <a href="{{route("userscreate")}}"><input class="btn btn-success" type="button" value="Agregar administrador"></a>
+                    <a href="{{route("userscrud")}}"><input class="btn btn-warning" type="button" value="Registro clientes"></a>
                 </div>
+                <!--
                 <div class="col-sm-12">
                     <div class="table-responsive">
                         <table class="table table-striped table-hover">
@@ -45,6 +46,7 @@
                             </thead>
                             <tbody>
                                 <?php
+                                /*
                                 if ($administrador) {
                                     while ($row = mysqli_fetch_assoc($administrador)) {
                                         $id = $row['idusuario']; 
@@ -68,7 +70,7 @@
                                     echo '<td colspan="9">No existe registros</td>';
                                     echo '</tr>';
                                 }
-                                ?>
+                               /* ?>
                             </tbody>
                         </table>
                     </div>
@@ -83,6 +85,8 @@
                 </div>
             </div>
         </div>
+        
+    -->
     </section>
 </div>
 
