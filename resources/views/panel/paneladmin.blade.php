@@ -4,6 +4,17 @@
 
 @section('content')
 
+<ul>
+    @foreach ($users as $user) 
+        <li>{{$user->name}}</li>
+        <li>{{$user->email}}</li>
+        <li>{{$user->id}}</li>
+        <li>{{$user->id_tipo_usuario}}</li>
+    @endforeach
+<ul>
+
+{{$users->links()}}
+
 <div id="content">
     <section>
         <div class="container mt-5">
@@ -73,5 +84,6 @@
         </div>
     </section>
 </div>
+
 
 @endsection

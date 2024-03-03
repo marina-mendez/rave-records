@@ -26,9 +26,10 @@ Route::controller(RecordsController::class)->group(function(){
     Route::get('records/{record}','record');
 });
 
-//Login
+//Login y panel de control
 Route::controller(UsersController::class)->group(function(){
     Route::get('login/cliente', 'cliente');
+    Route::get('paneldecontrol', 'paneladmin')->name('panel.paneladmin');
     Route::get('login/admin', 'admin');
 });
 
