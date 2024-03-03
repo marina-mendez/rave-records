@@ -48,13 +48,13 @@
                         <a class="nav-link" href="index.php?section=records">Records</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php?section=clases">Clases de DJ</a>
+                        <a class="nav-link" href="{{ asset('clases') }}">Clases de DJ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.php?section=tienda">Tienda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php?section=nosotros">Sobre Nosotros</a>
+                        <a class="nav-link" href="{{ asset('nosotros') }}">Sobre Nosotros</a>
                     </li>
                 </ul>
             </div>
