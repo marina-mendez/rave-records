@@ -9,8 +9,4 @@ class RecordsController extends Controller
     public function index(){
         return view('records.index');
     }
-
-    public function record($record){
-        return view('records.record');
-    }
 }

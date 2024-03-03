@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Producto;
 use Illuminate\Http\Request;
 
 class ProductosController extends Controller
 {
     public function index(){
-        return view('tienda.producto');
+
+        $productos = Producto::all();
+
+        return view('tienda.index', compact('productos'));
         //return "Pagina principal de productos.";
     }
 
