@@ -9,7 +9,7 @@ class ProductosController extends Controller
 {
     public function index(){
 
-        $productos = Producto::all();
+        $productos = Producto::paginate(6);
 
         return view('tienda.index', compact('productos'));
         //return "Pagina principal de productos.";

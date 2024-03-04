@@ -4,33 +4,6 @@
 
 @section('content')
 
-<ul>
-    @foreach ($productos as $producto) 
-        <li>{{$producto->nombre}}</li>
-        <li>{{$producto->precio}}</li>
-        <li>{{$producto->marca}}</li>
-        <li>{{$producto->cantidad}}</li>
-    @endforeach
-<ul>
-
-<ul>
-    @foreach ($productos as $producto) 
-        <li>{{$producto->nombre}}</li>
-        <li>{{$producto->precio}}</li>
-        <li>{{$producto->marca}}</li>
-        <li>{{$producto->cantidad}}</li>
-    @endforeach
-<ul>
-
-<ul>
-    @foreach ($productos as $producto) 
-        <li>{{$producto->nombre}}</li>
-        <li>{{$producto->precio}}</li>
-        <li>{{$producto->marca}}</li>
-        <li>{{$producto->cantidad}}</li>
-    @endforeach
-<ul>
-
 <section class="container">
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -55,51 +28,90 @@
         </div>
 </section>
 <section>
-    <span>Tienda</span><span>Productos</span>
-</section>
-<section>
-    <article>
-        <h2>Nuestros productos</h2>
-    </article>
-</section>
-<section>
-    <section>
-        <h4>Filtros</h4>
-        <a href="">Limpiar filtros</a>
-        <p>Cables</p>
-        <p>Vinilos</p>
-        <p>Audio</p>
-        <p>Consolas</p>
+    <section class="tienda-subtitle">
+        <span>Tienda ></span><span>Productos</span>
+    </section>
+    <section class="tienda-title">
         <article>
-            <p>Filtrar categoría</p>
-            <a href="">Aplicar filtro</a>
+            <h2 class="bold">Nuestros productos</h2>
         </article>
     </section>
-    <section>
-        <section>
-            @foreach ($productos as $producto)
-            <article>
-                <a href="">
-                    <figure>
-                        <div>
-                            <article> @if($producto->url)
-                                <img src="{{ $producto->url }}" alt="Imagen del producto" class="">
-                            @else
-                                <p>No hay imagen disponible</p>
-                            @endif
-                            </article>
-                            <article>
-                                <h4>{{$producto->nombre}}</h4>
-                                <span>{{$productos->marca}}</span>
-                                <span>{{$productos->precio}}</span>
-                                <a href=""></a>
-                            </article>
-                        </div>
-                    </figure>
-                </a>
-            </article>
-            @endforeach
+    <section class="tienda-products">
+        <section class="tienda-filtros">
+            <section class="tienda-filtrostext">
+                <h4>Filtros</h4>
+                <a href="">Limpiar filtros</a>
+                <p>Cables</p>
+                <p>Vinilos</p>
+                <p>Audio</p>
+                <p>Consolas</p>
+                <article class="tienda-filtrosbtn">
+                    <p>Filtrar categoría</p>
+                    <a href="">Aplicar filtro</a>
+                </article>
+            </section>
+        </section>
+        <section class="tienda-cards">
+            <section class="tienda-cardsection">
+                @foreach ($productos as $producto)
+                <article class="tienda-article">
+                    <a href="">
+                        <figure>
+                                <article class="article-img">
+                                    <img src="{{ asset('images/' . $producto->url) }}" alt="{{ $producto->nombre }}">
+                                </article>
+                                <article class="article-card">
+                                    <h4 class="bold">{{$producto->nombre}}</h4>
+                                    <p>{{$producto->marca}}</p>
+                                    <p>${{$producto->precio}}</p>
+                                    <a href=""><i class="bi bi-cart2 black-icon"></i> Añadir al carrito</a>
+                                </article>
+                        </figure>
+                    </a>
+                </article>
+                @endforeach
+            </section>
         </section>
     </section>
+</section>
+<section class="paginate-numbers">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+           
+            @if ($productos->onFirstPage())
+                <li class="page-item disabled">
+                    <span class="page-link" tabindex="-1">Antes</span>
+                </li>
+            @else
+                <li class="page-item">
+                    <a class="page-link" href="{{ $productos->previousPageUrl() }}" tabindex="-1" rel="prev">Antes</a>
+                </li>
+            @endif
+
+            
+            @foreach ($productos->getUrlRange(1, $productos->lastPage()) as $page => $url)
+                @if ($page == $productos->currentPage())
+                    <li class="page-item active">
+                        <span class="page-link">{{ $page }}</span>
+                    </li>
+                @else
+                    <li class="page-item">
+                        <a class="page-link" href="{{ $url }}">{{ $page }}</a>
+                    </li>
+                @endif
+            @endforeach
+
+            
+            @if ($productos->hasMorePages())
+                <li class="page-item">
+                    <a class="page-link" href="{{ $productos->nextPageUrl() }}" rel="next">Después</a>
+                </li>
+            @else
+                <li class="page-item disabled">
+                    <span class="page-link">Next</span>
+                </li>
+            @endif
+        </ul>
+    </nav>
 </section>
 @endsection
