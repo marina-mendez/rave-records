@@ -1,9 +1,7 @@
 <?php
-
 namespace Database\Seeders;
 
 use App\Models\Producto;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class ProductosSeeder extends Seeder
@@ -13,72 +11,274 @@ class ProductosSeeder extends Seeder
      */
     public function run(): void
     {
-        
-        $producto = new Producto();
-        $producto->nombre= 'Vinilo DANCE WITH ME';
-        $producto->precio= 47000;
-        $producto->marca= 'AFTERLIFE';
-        $producto->cantidad= 4;
-        $producto->url='dance-w-me.jpg';
-        $producto->descripcion='Tracks: dance with me (original)';
-        $producto->isbn= 1234567896;
-        $producto->id_tipo_producto=1;
-        $producto->save();
+        $productosData = [
+            [
+                'nombre' => 'Vinilo DANCE WITH ME',
+                'precio' => 47000,
+                'marca' => 'AFTERLIFE',
+                'cantidad' => 4,
+                'url' => 'dance-w-me.jpg',
+                'descripcion' => 'Tracks: dance with me (original)',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 1,
+            ],
+            [
+                'nombre' => 'Vinilo BIRD EP',
+                'precio' => 45000,
+                'marca' => 'AFTERLIFE',
+                'cantidad' => 6,
+                'url' => 'bird.jpg',
+                'descripcion' => 'Tracks:bird-secluded',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 1,
+            ],
+            [
+                'nombre' => 'Vinilo CHACHA',
+                'precio' => 47000,
+                'marca' => 'AFTERLIFE',
+                'cantidad' => 2,
+                'url' => 'chacha.jpg',
+                'descripcion' => 'Tracks: chacha - preciouse unica - majstar',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 1,
+            ],
+            [
+                'nombre' => 'Vinilo THE MIRAGE',
+                'precio' => 45000,
+                'marca' => 'AFTERLIFE',
+                'cantidad' => 8,
+                'url' => 'the-mirage.jpg',
+                'descripcion' => 'the mirage -northen lights',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 1,
+            ],
+            [
+                'nombre' => 'Vinilo BE SHARP SAY NOWT',
+                'precio' => 40000,
+                'marca' => 'PATRICK TOPPING',
+                'cantidad' => 10,
+                'url' => 'Be-sharp.jpg',
+                'descripcion' => 'Tracks: Be sharp say nowt - track chang',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 1,
+            ],
+            [
+                'nombre' => 'Vinilo IN MY MIND',
+                'precio' => 35000,
+                'marca' => 'LENSKE',
+                'cantidad' => 2,
+                'url' => 'In-my-mind.jpg',
+                'descripcion' => 'Tracks: In my mind - tripping - first light',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 1,
+            ],
+            [
+                'nombre' => 'Vinilo NANANA',
+                'precio' => 35000,
+                'marca' => 'XL Records',
+                'cantidad' => 7,
+                'url' => 'nanana.jpg',
+                'descripcion' => 'Tracks: Nanana (original) - Remix -Nanadub',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 1,
+            ],
+            [
+                'nombre' => 'Vinilo APOLLO',
+                'precio' => 50000,
+                'marca' => 'KNTXT',
+                'cantidad' => 4,
+                'url' => 'Apollo.jpg',
+                'descripcion' => 'Tracks: Apollo - Mercury - PPC',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 1,
+            ],
+            [
+                'nombre' => 'Controlador DJ XDJ-XZ',
+                'precio' => 100000,
+                'marca' => 'PIONEER',
+                'cantidad' => 2,
+                'url' => 'Xdj-xz.jpg',
+                'descripcion' => 'Color: Negro. Portable.',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 2,
+            ],
+            [
+                'nombre' => 'Controlador DJ DDJ – 400',
+                'precio' => 120000,
+                'marca' => 'PIONEER',
+                'cantidad' => 3,
+                'url' => 'Xdj-xz.jpg',
+                'descripcion' => 'Color: Negro. Portable.',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 2,
+            ],
+            [
+                'nombre' => 'Controlador DJ DDJ-1000-OW',
+                'precio' => 135000,
+                'marca' => 'PIONEER',
+                'cantidad' => 5,
+                'url' => 'Ddj-1000.jpg',
+                'descripcion' => 'Color Blanco y Rojo',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 2,
+            ],
+            [
+                'nombre' => 'Controlador DJ XDJ – RX3',
+                'precio' => 95000,
+                'marca' => 'PIONEER',
+                'cantidad' => 1,
+                'url' => 'Dj-xdj-rx3.jpg',
+                'descripcion' => 'Color negro. Todo en uno.',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 2,
+            ],
+            [
+                'nombre' => 'Controlador DJ DDJ-200',
+                'precio' => 98000,
+                'marca' => 'PIONEER',
+                'cantidad' => 2,
+                'url' => 'Ddj-200.jpg',
+                'descripcion' => 'Color negro.',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 2,
+            ],
+            [
+                'nombre' => 'Controlador DJ DDJ-RX 4',
+                'precio' => 102000,
+                'marca' => 'PIONEER',
+                'cantidad' => 4,
+                'url' => 'Ddj-rx4.jpg',
+                'descripcion' => 'Color negro.',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 2,
+            ],
+            [
+                'nombre' => 'Controlador DJ DDJ-SB3-S',
+                'precio' => 200000,
+                'marca' => 'PIONEER',
+                'cantidad' => 3,
+                'url' => 'Ddj-sb3.jpg',
+                'descripcion' => 'Color plateado y  blanco.',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 2,
+            ],
+            [
+                'nombre' => 'Controlador DJ XDJ -RR',
+                'precio' => 156000,
+                'marca' => 'PIONEER',
+                'cantidad' => 2,
+                'url' => 'Xdj-rr.jpg',
+                'descripcion' => 'Color negro. 2 canales.',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 2,
+            ],
+            [
+                'nombre' => 'HeadBand H04',
+                'precio' => 200000,
+                'marca' => 'AIAIAI',
+                'cantidad' => 4,
+                'url' => 'Head-band.jpg',
+                'descripcion' => ' Alto confort con viscoelástica y acolchado para la cabeza revestido de piel sintética para sesiones más largas.',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 3,
+            ],
+            [
+                'nombre' => 'Earpads – E04',
+                'precio' => 800000,
+                'marca' => 'AIAIAI',
+                'cantidad' => 10,
+                'url' => 'Ear-pads.jpg',
+                'descripcion' => 'Alcolchado de color negro.',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 3,
+            ],
+            [
+                'nombre' => 'DJ Preset',
+                'precio' => 450000,
+                'marca' => 'AIAIAI',
+                'cantidad' => 6,
+                'url' => 'Auris.jpg',
+                'descripcion' => 'La combinación de la cinta de nylon H02 durable y las almohadillas de cuero E02, proporciona un gran aislamiento, este es un audífono robusto, adecuado para actuaciones en directo, de música con altos bajos o pesada.',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 3,
+            ],            
+            [
+                'nombre' => 'CALMER SOFT',
+                'precio' => 130000,
+                'marca' => 'FLARE AUDIO',
+                'cantidad' => 9,
+                'url' => 'Calmer-soft.jpg',
+                'descripcion' => 'Cómoda silicona suave al tacto. Lavable y reutilizable.',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 3,
+            ],
+            [
+                'nombre' => 'EARSHADE',
+                'precio' => 142000,
+                'marca' => 'FLARE AUDIO',
+                'cantidad' => 12,
+                'url' => 'Ear-shade.jpg',
+                'descripcion' => 'Tapones para los oídos de primera calidad diseñados para reducir los niveles de ruido en un promedio de -27 dB en todo el rango de frecuencia.',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 3,
+            ],
+            [
+                'nombre' => 'Cable d+ USB CLASS B',
+                'precio' => 250000,
+                'marca' => 'OYAIDE NEO',
+                'cantidad' => 2,
+                'url' => 'Class-b.jpg',
+                'descripcion' => 'Color verde.',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 4,
+            ],
+            [
+                'nombre' => 'Cable d+ RCA CLASS A 2.0 M',
+                'precio' => 178000,
+                'marca' => 'OYAIDE NEO',
+                'cantidad' => 1,
+                'url' => 'Class-a.jpg',
+                'descripcion' => 'Color naranja.',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 4,
+            ],
+            [
+                'nombre' => 'Cable d+ Stereo 1/4 - Analógico',
+                'precio' => 185000,
+                'marca' => 'OYAIDE NEO',
+                'cantidad' => 3,
+                'url' => 'Class-stereo.jpg',
+                'descripcion' => 'Color verde y blanco.',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 4,
+            ],
+            [
+                'nombre' => 'Cable As 80B V2 Digital',
+                'precio' => 200000,
+                'marca' => 'OYAIDE NEO',
+                'cantidad' => 4,
+                'url' => 'Neo-80b.jpg',
+                'descripcion' => 'Color azul.',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 4,
+            ],
+            [
+                'nombre' => 'Cable d+ RCA CLASS S 1.0M',
+                'precio' => 215000,
+                'marca' => 'OYAIDE NEO',
+                'cantidad' => 1,
+                'url' => 'Class-s.jpg',
+                'descripcion' => 'Color lila.',
+                'isbn' => 1234567896,
+                'id_tipo_producto' => 4,
+            ]
 
-        $producto2 = new Producto();
-        $producto2->nombre= 'Vinilo BIRD EP';
-        $producto2->precio= 45000;
-        $producto2->marca= 'AFTERLIFE';
-        $producto2->cantidad= 6;
-        $producto2->url='bird.jpg';
-        $producto2->descripcion='Tracks:bird-secluded';
-        $producto2->isbn= 1234567896;
-        $producto2->id_tipo_producto=1;
-        $producto2->save();
+        ];
 
-        $producto3 = new Producto();
-        $producto3->nombre= 'Vinilo CHACHA';
-        $producto3->precio= 47000;
-        $producto3->marca= 'AFTERLIFE';
-        $producto3->cantidad= 2;
-        $producto3->url='chacha.jpg';
-        $producto3->descripcion='Tracks: chacha - preciouse unica - majstar';
-        $producto3->isbn= 1234567896;
-        $producto3->id_tipo_producto=1;
-        $producto3->save();
-
-        $producto4 = new Producto();
-        $producto4->nombre= 'Vinilo THE MIRAGE';
-        $producto4->precio= 45000;
-        $producto4->marca= 'AFTERLIFE';
-        $producto4->cantidad= 8;
-        $producto4->url='the-mirage.jpg';
-        $producto4->descripcion='the mirage -northen lights';
-        $producto4->isbn= 1234567896;
-        $producto4->id_tipo_producto=1;
-        $producto4->save();
-
-        $producto5 = new Producto();
-        $producto5->nombre= 'Vinilo BE SHARP SAY NOWT';
-        $producto5->precio= 40000;
-        $producto5->marca= 'PATRICK TOPPING';
-        $producto5->cantidad= 10;
-        $producto5->url='Be-sharp.jpg';
-        $producto5->descripcion='Tracks: Be sharp say nowt - track chang';
-        $producto5->isbn= 1234567896;
-        $producto5->id_tipo_producto=1;
-        $producto5->save();
-
-        $producto6 = new Producto();
-        $producto6->nombre= 'Vinilo IN MY MIND';
-        $producto6->precio= 35000;
-        $producto6->marca= 'LENSKE';
-        $producto6->cantidad= 2;
-        $producto6->url='In-my-mind.jpg';
-        $producto6->descripcion='Tracks: In my mind - tripping - first light';
-        $producto6->isbn= 1234567896;
-        $producto6->id_tipo_producto=1;
-        $producto6->save();
-
+        foreach ($productosData as $data) {
+            $producto = new Producto();
+            $producto->fill($data);
+            $producto->save();
+        }
     }
 }
