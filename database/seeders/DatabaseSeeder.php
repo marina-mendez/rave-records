@@ -13,15 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $artista = new Artista();
-        $artista->nombre= 'Marina';
-        $artista->apellido= 'Mendez';
-        $artista->save();
 
-        $artista2 = new Artista();
-        $artista2->nombre= 'Marina';
-        $artista2->apellido= 'Mendez';
-        $artista2->save();
+        //$this->call(TipoProductosSeeder::class);
 
         $this->call(ProductosSeeder::class);
 

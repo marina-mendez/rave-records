@@ -14,10 +14,13 @@ return new class extends Migration
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->integer('precio');
-            $table->string('marca');
-            $table->integer('cantidad');
-            $table->foreignId('id_tipo_producto')->references('id')->on('tipoproductos');
+            $table->integer('precio')->nullable();
+            $table->string('marca')->nullable();
+            $table->integer('cantidad')->nullable();
+            $table->string('url')->nullable();
+            $table->text('descripcion')->nullable();
+            $table->integer('isbn')->nullable();
+            $table->foreignId('id_tipo_producto')->references('id')->on('tipo_productos')->default(1);
             $table->timestamps();
         });
     }

@@ -26,8 +26,7 @@
                     <!-- CAMBIOS DE MARU!!!!!!:-->
                     <a href="{{route("productoscreate")}}"><input class="btn btn-primary" type="button" value="Agregar productos"></a>
                     <a href="{{route("productoscrud")}}"><input class="btn btn-primary" type="button" value="Registro de productos"></a>
-                    <a href="{{route("userscreate")}}"><input class="btn btn-success" type="button" value="Agregar administrador"></a>
-                    <a href="{{route("userscrud")}}"><input class="btn btn-warning" type="button" value="Registro clientes"></a>
+                    <a href="{{route("userscrud", $users)}}"><input class="btn btn-warning" type="button" value="Registro clientes"></a>
                 </div>
                 <!--
                 <div class="col-sm-12">
@@ -68,8 +67,8 @@
                                     echo '<tr class="text-center">';
                                     echo '<td colspan="9">No existe registros</td>';
                                     echo '</tr>';
-                                }
-                               /* ?>
+                                }/*/
+                                ?>
                             </tbody>
                         </table>
                     </div>
@@ -85,7 +84,7 @@
             </div>
         </div>
         
-    -->
+    -->-->
     </section>
 </div>
 
