@@ -17,6 +17,9 @@ return new class extends Migration
             $table->integer('precio');
             $table->string('marca');
             $table->integer('cantidad');
+            $table->string('url');
+            $table->text('descripcion');
+            $table->integer('isbn');
             $table->foreignId('id_tipo_producto')->references('id')->on('tipoproductos');
             $table->timestamps();
         });

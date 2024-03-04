@@ -51,7 +51,7 @@
                         <a class="nav-link" href="{{ asset('clases') }}">Clases de DJ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php?section=tienda">Tienda</a>
+                        <a class="nav-link" href="{{ asset('tienda') }}">Tienda</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ asset('nosotros') }}">Sobre Nosotros</a>
