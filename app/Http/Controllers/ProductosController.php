@@ -20,11 +20,21 @@ class ProductosController extends Controller
         //return "Pagina que muestra la categoría $categoria de producto.";
 
     }
-    public function producto($categoria, $prod){
-        return view('tienda.producto');
+    public function producto($id){
+
+        $producto = Producto::find($id);
+
+        return view('tienda.producto', compact('producto'));
 
     }
 
+    public function create(){
+        return view('productos.productoscreate');
+    }
+
+    public function modificar(){
+        return view('productos.productoscrud');
+    }
 
     /*
     public function categoria($categoria){
@@ -34,7 +44,5 @@ class ProductosController extends Controller
     */
 
 }
-    /*public function create(){
-        //formulario para crear algo: en este caso no sirve
-    }*/
+
 

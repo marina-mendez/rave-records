@@ -4,6 +4,15 @@
 
 @section('content')
 
+<ul>
+    @foreach ($productos as $producto) 
+        <li>{{$producto->nombre}}</li>
+        <li>{{$producto->precio}}</li>
+        <li>{{$producto->marca}}</li>
+        <li>{{$producto->cantidad}}</li>
+    @endforeach
+<ul>
+
 <section class="container">
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            $table->foreignId('id_tipo_usuario')->references('id')->on('tipousuarios');
+            $table->foreignId('id_tipo_usuario')->references('id')->on('tipo_usuarios');
         });
     }
 
