@@ -25,6 +25,10 @@ i {
     padding: 10px; 
 }
 
+.navbar-brand b {
+    font-size: 2rem;
+}
+
 .black-icon {
     color: black;
     font-size: 24px;
@@ -594,9 +598,32 @@ footer {
 }
 
 .tienda-filtros {
-    border: 1px solid blue;
-    padding: 30px;
-    height: 50vh
+    border: 1px solid #d8d8db;
+    background-color: #d7dddd;
+    height: 50vh;
+}
+
+.tienda-filtrostext {
+    width: 13vw;
+    padding: 20px;
+}
+
+.tienda-filtrostext div {
+  display: flex;
+  justify-content: center;
+}
+
+.tienda-filtrostext div a {
+    color: grey;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.tienda-filtrostext div a:hover{
+    background-color: black;
+    color: white;
 }
 
 .tienda-filtros h4, a {
@@ -613,12 +640,28 @@ footer {
     text-align: center;
 }
 
+.tienda-filtrosbtn a {
+    background-color: blue;
+    color: white;
+    border: 1px solid blue;
+    border-radius: 20px;
+    padding: 9px 20px; 
+    text-decoration: none;
+
+}
+.tienda-filtrosbtn a:hover {
+background-color: lightblue;
+color: black;
+}
+
+
 .tienda-cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-left: 20px;
+    justify-content: space-between;
+    margin-left: 50px;
+    padding: 10px;
 }
 
 .tienda-cardsection {
@@ -635,8 +678,9 @@ footer {
 }
 
 .tienda-article {
+    background-color: #e3e3e3;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    width: 30vw;
+    width: 35vw;
     margin-bottom: 20px;
 }
 
@@ -666,6 +710,109 @@ footer {
 
 .article-card h4 {
      font-size: 1.3rem;
+    
+}
+
+.article-card .carrito-btn{
+    color: blue;
+    border: 1px solid blue;
+    border-radius: 20px;
+    padding: 10px 14px; 
+    text-decoration: none;
+}
+
+.article-card .carrito-btn i:hover {
+    background-color: blue;
+    color: white;
+}
+
+.article-card .carrito-btn:hover {
+    background-color: blue;
+    color: white;
+}
+
+.paginate-numbers {
+    margin-top: 30px;
+}
+
+.tienda-title-id h2 {
+    margin: 20px;
+}
+
+.tienda-id-card {
+    padding: 70px;
+    display: flex;
+    background-color: grey;
+    justify-content: center;
+}
+
+.id-card figure {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    width: 65vw;
+    height: 50vh;
+    padding: 40px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    background-color: white;
+
 }
 
 
+.id-card-text h4 {
+    margin-bottom: 2rem;
+}
+
+.id-card-text h5 {
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+
+.btn-tienda {
+    background-color: blue;
+    color: white;
+    border: 1px solid;
+    padding: 15px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.btn-tienda i {
+    color: white;
+}
+
+.btn-tienda:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+.tittle-id-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.id-card-text div{
+    margin-top: 1.5rem;
+}
+
+
+.btn-back {
+    margin: 25px;
+}
+
+.btn-back a {
+    background-color: blue;
+    color: white;
+    border: 1px solid blue;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.btn-back a:hover {
+    background-color: lightblue;
+    color: black;
+}

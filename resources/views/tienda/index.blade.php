@@ -27,9 +27,10 @@
         </button>
         </div>
 </section>
+<hr>
 <section>
     <section class="tienda-subtitle">
-        <span>Tienda ></span><span>Productos</span>
+        <span class="bold">Tienda ></span><span>Productos</span>
     </section>
     <section class="tienda-title">
         <article>
@@ -39,14 +40,14 @@
     <section class="tienda-products">
         <section class="tienda-filtros">
             <section class="tienda-filtrostext">
-                <h4>Filtros</h4>
-                <a href="">Limpiar filtros</a>
+                <h4 class="bold">Filtros</h4>
+                <div><a href="">Limpiar filtros</a></div>
                 <p>Cables</p>
                 <p>Vinilos</p>
                 <p>Audio</p>
                 <p>Consolas</p>
                 <article class="tienda-filtrosbtn">
-                    <p>Filtrar categoría</p>
+                    <p class="bold">Filtrar categoría</p>
                     <a href="">Aplicar filtro</a>
                 </article>
             </section>
@@ -55,7 +56,7 @@
             <section class="tienda-cardsection">
                 @foreach ($productos as $producto)
                 <article class="tienda-article">
-                    <a href="">
+                    <a href="{{ route('producto.show', ['id' => $producto->id]) }}">
                         <figure>
                                 <article class="article-img">
                                     <img src="{{ asset('images/' . $producto->url) }}" alt="{{ $producto->nombre }}">
@@ -63,8 +64,8 @@
                                 <article class="article-card">
                                     <h4 class="bold">{{$producto->nombre}}</h4>
                                     <p>{{$producto->marca}}</p>
-                                    <p>${{$producto->precio}}</p>
-                                    <a href=""><i class="bi bi-cart2 black-icon"></i> Añadir al carrito</a>
+                                    <p class="bold">${{$producto->precio}}</p>
+                                    <a class="carrito-btn" href="{{ asset('carrito') }}"><i class="bi bi-cart2 black-icon"></i> Añadir al carrito</a>
                                 </article>
                         </figure>
                     </a>
@@ -80,11 +81,11 @@
            
             @if ($productos->onFirstPage())
                 <li class="page-item disabled">
-                    <span class="page-link" tabindex="-1">Antes</span>
+                    <span class="page-link" tabindex="-1">Anterior</span>
                 </li>
             @else
                 <li class="page-item">
-                    <a class="page-link" href="{{ $productos->previousPageUrl() }}" tabindex="-1" rel="prev">Antes</a>
+                    <a class="page-link" href="{{ $productos->previousPageUrl() }}" tabindex="-1" rel="prev">Anterior</a>
                 </li>
             @endif
 
@@ -104,11 +105,11 @@
             
             @if ($productos->hasMorePages())
                 <li class="page-item">
-                    <a class="page-link" href="{{ $productos->nextPageUrl() }}" rel="next">Después</a>
+                    <a class="page-link" href="{{ $productos->nextPageUrl() }}" rel="next">Siguiente</a>
                 </li>
             @else
                 <li class="page-item disabled">
-                    <span class="page-link">Next</span>
+                    <span class="page-link">Siguiente</span>
                 </li>
             @endif
         </ul>
